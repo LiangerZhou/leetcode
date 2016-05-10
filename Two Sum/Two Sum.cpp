@@ -1,13 +1,13 @@
 /*
-    排序后从左右端点开始扫描
-    复杂度O(nlogn)
+    时间复杂度O(n^2)
 */
 
-class Solution {
+public class Solution {
 	    public int[] twoSum(int[] nums, int target) {
+	        
 	        int[] num=new int[2];
-	        for(int i=0;i<nums.length-1;++i){
-	            for(int j=i+1;j<nums.length;++j){
+	        for(int i=0;i<nums.length;i++){
+	            for(int j=i+1;j<nums.length;j++){
 	               int sum=nums[i]+nums[j];
 	               if(sum==target){
 	            	 num[0]=i;
@@ -15,6 +15,6 @@ class Solution {
 	               }
 	            }
 	        }
-			return num;
+		return num;
 	    }
-};
+}
